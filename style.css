@@ -1,0 +1,145 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fffcfc;
+}
+h1{
+    color: #000000;
+}
+h3{
+    color: #1d061a;
+}
+p{
+    padding-top: 5px;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.container .box
+{
+    position:relative;
+    width: 340px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
+.container .box::before
+{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 50px;
+    width: 60%;
+    height: 100%;
+    background:#fff ;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+
+}
+.container .box::after
+{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 50px;
+    width: 70%;
+    height: 100%;
+    background:#fff ;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+    transition: 0.5s;
+
+}
+.container .box:hover:before,
+.container .box:hover:after
+{
+    transform: skewX(0deg);
+    left: 40px;
+    width: calc(100% - 90px);
+}
+
+.container .box:before,
+.container .box:after
+{
+    background: linear-gradient(315deg,#00eeff,#ff0058);
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+.container .box span::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.container .box .content 
+{
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+}
+button{
+    padding: 4px 5px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    margin-top: 10px;
+    color: white;
+    
+
+}
+.content
+{
+    z-index: 6;
+    /*display: none;*/
+    
+}

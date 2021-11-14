@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Glowing Gradient Glassmorphism
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            
+            <span></span>
+            <div class="content">
+                <h1>General Questions!! </h1>
+                <h3>Please answer the following questions..</h3>
+                <div>
+                    <p id = p1> Do you accept all major cradit cards?</p>
+                    <input id="rd1" name="grp1" type="radio"
+                    value="Yes">Yes</input>
+                    <input id="rd2" name="grp1" type="radio"
+                    value="No">No</input>
+                    <button type="button" onclick="change1()">confirm</button>
+
+                </div>
+                <div>
+                    <p id = p1> Do you support local  farmars?</p>
+                    <input id="rd3" name="grp3" type="radio"
+                    value="Yes">Yes</input>
+                    <input id="rd4" name="grp3" type="radio"
+                    value="No">No</input>
+                    <button type="button" onclick="change3()">confirm</button>
+
+                </div>
+                <div>
+                    <p id = p1> Do you use Organic Ingredients?</p>
+                    <input id="rd5" name="grp5" type="radio"
+                    value="Yes">Yes</input>
+                    <input id="rd6" name="grp5" type="radio"
+                    value="No">No</input>
+                    <button type="button" onclick="change5()">confirm</button>
+
+                </div>
+                
+                
+
+            
+                
+                
+
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function change1(){
+            var rd1 = document.getElementById("rd1");
+            var rd2 = document.getElementById("rd2");
+
+            if(rd1.checked==true)
+            alert("The channel selected is :" +rd1.value );
+            else if(rd2.checked==true)
+            alert("the channel selected is :"+rd2.value);
+            else
+            alert("No channel selected");
+            
+           
+        }
+        function change3(){
+            var rd3 = document.getElementById("rd3");
+            var rd4 = document.getElementById("rd4");
+
+            if(rd3.checked==true)
+            alert("The channel selected is :" +rd3.value );
+            else if(rd4.checked==true)
+            alert("the channel selected is :"+rd4.value);
+            else
+            alert("No channel selected");
+            
+           
+        }
+        function change5(){
+            var rd5 = document.getElementById("rd5");
+            var rd6 = document.getElementById("rd6");
+
+            if(rd5.checked==true)
+            alert("The channel selected is :" +rd5.value );
+            else if(rd6.checked==true)
+            alert("the channel selected is :"+rd6.value);
+            else
+            alert("No channel selected");
+            
+           
+        }
+        
+    </script>
+</body>
+
+</html>
